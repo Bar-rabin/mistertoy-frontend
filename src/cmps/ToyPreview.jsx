@@ -12,6 +12,7 @@ export function ToyPreview({ toy }) {
             <Link to={`/toy/edit/${toy._id}`}>Edit</Link> &nbsp; | &nbsp;
             <Link to={`/toy/${toy._id}`}>Details</Link>
 
+
         </article>
     )
 }

@@ -1,6 +1,6 @@
 import { ToyPreview } from "./ToyPreview.jsx"
 
-export function ToyList({ toys, onRemoveToy, onEditToy }) {
+export function ToyList({ toys, onRemoveToy }) {
 
     return (
         <ul className="toy-list">
@@ -9,8 +9,7 @@ export function ToyList({ toys, onRemoveToy, onEditToy }) {
                     <ToyPreview toy={toy} />
 
                     <div>
-                        <button onClick={() => onRemoveToy(toy._id)}>x</button>
-                        <button onClick={() => onEditToy(toy)}>Edit</button>
+                        <button onClick={() => onRemoveToy(toy._id)}>Remove</button>
                     </div>
 
 
