@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { loadToys, removeToy, removeToyOptimistic, saveToy, setFilterBy } from '../store/actions/toy.actions.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
-import { toyService } from '../services/toy.service.local.js'
+import { toyService } from "../services/toy.service.js"
 import { ToyFilter } from '../cmps/ToyFilter.jsx'
 import { ToyList } from '../cmps/ToyList.jsx'
 
@@ -14,6 +14,7 @@ export function ToyIndex() {
     const toys = useSelector(storeState => storeState.toyModule.toys)
     const filterBy = useSelector(storeState => storeState.toyModule.filterBy)
     const isLoading = useSelector(storeState => storeState.toyModule.isLoading)
+
 
     useEffect(() => {
         loadToys()
@@ -38,6 +39,7 @@ export function ToyIndex() {
 
     function onAddToy() {
         const toyToSave = toyService.getRandomToy()
+        console.log(toyToSave)
         saveToy(toyToSave)
             .then((toyToSave) => {
                 showSuccessMsg(`Toy added (id: ${toyToSave._id})`)
