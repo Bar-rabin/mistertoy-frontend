@@ -1,0 +1,36 @@
+@import 'setup/_vars.scss';
+@import 'setup/_typography.scss';
+
+/* Base */
+@import 'base/_base.scss';
+@import 'base/_helpers.scss';
+@import 'base/_layout.scss';
+@import 'base/_forms.scss';
+
+/* Components */
+@import 'cmps/_toy-Index.scss';
+@import 'cmps/_toy-edit.scss';
+@import 'cmps/_app-header.scss';
+@import 'cmps/_app-footer.scss';
+@import 'cmps/_user-msg.scss';
+
+@import 'cmps/_toy-Filter.scss';
+@import 'cmps/_toy-list.scss';
+@import 'cmps/_toy-preview.scss';
+
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app>* {
+    width: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+

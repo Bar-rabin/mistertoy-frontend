@@ -1,0 +1,11 @@
+.app-header {
+    background-color: $clr1;
+    color: $gray3;
+    padding-block: 1em;
+    text-align: center;
+    .app-nav {
+        display: flex;
+        gap: 15px;
+        justify-content: center
+    }
+}
