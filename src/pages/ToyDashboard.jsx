@@ -51,10 +51,19 @@ export function ToyDashboard() {
     };
 
     return (
-        <section>
+        <section
+            style={{
+                margin: 'auto',
+                position: 'relative',
+                height: '30vh',
+                width: '60vw',
+                display: 'grid',
+                alignContent: 'space-between',
+                justifyContent: 'center'
+            }}>
             <Pie data={data} />
             <PolarArea data={data} />
-        </section>
+        </section >
     )
 
 }
